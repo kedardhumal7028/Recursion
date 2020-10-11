@@ -1,1 +1,25 @@
-# Recursion
+#include<stdio.h>
+#include<conio.h>
+int fib(int);
+void main()
+{
+    int n,i,f;
+    printf("Enter Any Number: ");
+    scanf("%d", &n);
+    for(i=0;i<n;i++)
+    {
+      f=fib(i);
+      printf("%d",f);
+    }
+    getch();
+
+}
+int fib(int n)
+{
+    int f;
+    if((n==0)||(n==1))
+    return n;
+    f=(fib(n-1)+fib(n-2));
+    return f;
+
+}
